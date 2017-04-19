@@ -24,6 +24,7 @@ function pageController()
         case '/login': 
             $mainView = '../views/users/login.php';
             $data['message'] = "";
+
             if (Auth::check()) {
                     header("Location: /");
                     exit;
