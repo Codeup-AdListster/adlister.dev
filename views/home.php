@@ -23,16 +23,18 @@
             
             <!-- Placeholder for featured items.-->
             <div class="row">
-                <?php foreach($ads as $ad) :?>
-                
+                <?php foreach($ads as $ad) : ?>                
                 <div class="col-xs-6 col-sm-4">
                     
                     <div>
-                        <p><img src= "/<?= $ad->image ?>"></p>
-                        <p><?= $ad->title ?></p>
-                        <p><?= $ad->price ?></p>
-                        <p><?= $ad->description ?></p>
+                        <p><a href="/ads/show?id=<?=$ad->id?>"><img src="<?= $ad->image ?>"><p>
+                        <p><a href="/ads/show?id=<?=$ad->id?>"><?= $ad->title?><p>
                     </div>
+
+                    <form action="/ads/delete">
+                        <input type="hidden" name="id" value="<?=$ad->id?>">
+                        <button id="delete">Delete</button>
+                    </form>
 
                 </div>
         <?php endforeach; ?>
@@ -41,7 +43,6 @@
     </section>
 
 </div>
-
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

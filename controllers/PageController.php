@@ -144,8 +144,10 @@ function pageController()
             $mainView = '../views/ads/index.php';
             break;
 
-        case '/ads?id={n}':
+        case '/ads/show':
             $mainView = '../views/ads/show.php';
+            $id = Input::get('id');
+            $data['ad'] = Ad::find($id);
             break;
 
         case '/ads/create':
@@ -165,6 +167,19 @@ function pageController()
             }   
             break;
 
+        case '/ads/delete':
+            $ad = Ad::find(Input::get('id'));
+                if ($ad->user_id === Auth::id()){
+                $ad->delete();
+                header('Location: /ads');
+                exit;
+            } else {
+                header('Location: /ads');
+            exit;
+            }
+
+            break;
+        
         default:    // displays 404 if route not specified above
             $mainView = '../views/404.php';
             break;
