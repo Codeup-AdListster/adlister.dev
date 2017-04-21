@@ -32,7 +32,7 @@ if(Auth::check() !== true) {
                     <?php unset($_SESSION['SUCCESS_MESSAGE']); ?>
                 <?php endif; ?>
 
-                <form method="POST" action="" data-validation data-required-message="This field is required">
+                <form method="POST" action="/accountUpdate" data-validation data-required-message="This field is required">
 
                     <div class="form-group">
                         <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" value="<?= $user->name; ?>" data-required>
@@ -41,7 +41,7 @@ if(Auth::check() !== true) {
                         <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="<?= $user->email; ?>" data-required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="<?= $user->username; ?>" data-required>
+                        <?= $user->username; ?>
                     </div>
                     <button type="submit" class="btn btn-primary">Update Account</button>
 

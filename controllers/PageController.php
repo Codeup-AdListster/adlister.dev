@@ -122,6 +122,14 @@ function pageController()
             $data['user'] = $user;
             break;
 
+        case '/accountUpdate':
+            $user = User::find(Auth::id());
+            $user->name = Input::get('name');
+            $user->email = Input::get('email');
+            $user->save();
+            header('Location: /account');
+            die;
+
         case '/account/edit':
             $user = User::find(Auth::id());
             $data['user'] = $user;
