@@ -18,8 +18,8 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="/account">View Account</a></li>
             <li><a href="/ads/create">Create Ad</a></li>
-            <!-- comment -->
-            <?phpif(Auth::check()): ?>
+           
+            <?php if(Auth::check()): ?>
             <?php else: ?>
                 <li class="divider"></li>
                 <li><a href="/signup">Sign Up</a></li>
