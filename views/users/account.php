@@ -41,5 +41,6 @@ if(Auth::check() !== true) {
         <?php echo $user->email ?>
 	  </div>
 	</div>
+	<button type="submit" class="btn btn-primary"><a href="/account/edit">Edit Account</a></button>
 </body>
 </html>

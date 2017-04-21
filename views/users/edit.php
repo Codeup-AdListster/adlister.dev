@@ -1,6 +1,7 @@
 <?php
 require_once '../utils/Auth.php';
-require_once '../database/seeds/user_seeder.php';
+require_once '../models/User.php';
+require_once '../utils/Input.php';
 
 if(Auth::check() !== true) {
     header("Location: http://adlister.dev/login");

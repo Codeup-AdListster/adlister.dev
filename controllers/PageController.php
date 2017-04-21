@@ -123,6 +123,9 @@ function pageController()
             break;
 
         case '/account/edit':
+            $user = User::find(Auth::id());
+            $data['user'] = $user;
+            $data['errors'] = [];
             $mainView = '../views/users/edit.php';
             if(!Auth::check()) {
                 header('Location: /login');
