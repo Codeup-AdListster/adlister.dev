@@ -146,10 +146,16 @@ function pageController()
             $page = Input::get('page', 1);
             $lastPage = getLastPage($limit);
             handleOutOfRangeRequests($page, $lastPage);
-            $data['adListings'] = Ad::paginate($page, $limit);
+            if(Input::has('search')){
+                $data['adListings'] = Ad::search(Input::get('search'));
+            }
+            else {
+                $data['adListings'] = Ad::paginate($page, $limit);
+            }
             $data['page'] = $page;
             $data['lastPage'] = $lastPage;
             $mainView = '../views/ads/index.php';
+
             break;
 
         case '/ads/show':
