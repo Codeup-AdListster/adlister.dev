@@ -31,11 +31,6 @@
                         <p><a href="/ads/show?id=<?=$ad->id?>"><?= $ad->title?><p>
                     </div>
 
-                    <form action="/ads/delete">
-                        <input type="hidden" name="id" value="<?=$ad->id?>">
-                        <button id="delete">Delete</button>
-                    </form>
-
                 </div>
         <?php endforeach; ?>
                 

@@ -177,7 +177,6 @@ function pageController()
                 header('Location: /ads');
             exit;
             }
-
             break;
         
         default:    // displays 404 if route not specified above
