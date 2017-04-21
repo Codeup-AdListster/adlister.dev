@@ -18,11 +18,12 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="/account">View Account</a></li>
             <li><a href="/ads/create">Create Ad</a></li>
-            <?php if(Auth::check()): ?>
+            <!-- comment -->
+            <?phpif(Auth::check()): ?>
             <?php else: ?>
                 <li class="divider"></li>
                 <li><a href="/signup">Sign Up</a></li>
-                
+            
             <?php endif; ?>
             <li class="divider"></li>
             <li><a href="/ads?id={n}">Posted Ads</a></li>
