@@ -35,8 +35,9 @@
 		height: 200px;
 	}
 
-	#all_ads {
-		position: relative;
+	a {
+		text-decoration: none;
+		color: auto;
 	}
 
 	.footer-bottom {
