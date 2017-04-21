@@ -38,15 +38,6 @@ if(!empty($_POST)) {
 	}
 }
 
-function validateInput() {
-	if(empty($_POST['title']) || empty($_POST['price']) || empty($_POST['description']) || empty($_POST['image'])) {
-		return false;
-	} else {
-		return true;
-	}
-}
-
-
 ?>
 
 <h1 class="text-center">Create an Ad</h1>
