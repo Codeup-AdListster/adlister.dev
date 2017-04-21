@@ -240,12 +240,6 @@ abstract class Model {
 
     public static function paginate($pageNo, $resultsPerPage = 6) {
         self::dbConnect();
-        // TODO: call dbConnect to ensure we have a database connection
-        // TODO: calculate the limit and offset needed based on the passed
-        //       values
-        // TODO: use the $dbc static property to query the database with the
-        //       calculated limit and offset
-        // TODO: return an array of the found Park objects
         $c = self::count();
         $numPages = ceil($c / $resultsPerPage);
         $o = ($pageNo -1) * $resultsPerPage;
@@ -266,6 +260,13 @@ abstract class Model {
 
         return $models;
 
+    }
+
+    public static function search($search) {
+        self::dbConnect();
+        $stmt = self::$dbc->prepare('SELECT * FROM ' . static::$table . ' WHERE title LIKE %:search%');
+        $stmt->bindValue(':search', $search, PDO::PARAM_STR);
+        $stmt->execute();
     }
 
     public static function count() {
