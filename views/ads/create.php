@@ -39,8 +39,7 @@ if(!empty($_POST)) {
 }
 
 ?>
-
-<h1 class="text-center">Create an Ad</h1>
+<h1 class="section-title text-center">Create an Ad</h1>
 
 <form class="form-horizontal" method="POST" action="/ads/create" enctype="multipart/form-data">
 	<fieldset>

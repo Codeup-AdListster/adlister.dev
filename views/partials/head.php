@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Template Example</title>
+    <title>localHookUps</title>
 
 	<!-- Custom stylesheet -->
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
@@ -27,12 +27,13 @@
 
 	h1, h2, h3, h4 {
 
-		font-family: 'Palanquin Dark', sans-serif;
+		font-family: 'Raleway', sans-serif;
+		margin-bottom: 35px;
 	}
 
 	img {
-		width: 350px;
-		height: 200px;
+		width: 325px;
+		height: 275px;
 	}
 
 	a {
@@ -62,6 +63,12 @@
     font-size: 150%;
     color: #F5FAFA;
     background-color: #6D929B;
+	}
+
+	.home_img {
+		width: 100%;
+
+
 	}
 	</style>
 

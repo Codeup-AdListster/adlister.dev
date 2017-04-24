@@ -14,7 +14,7 @@ if(Auth::check() !== true) {
 
         <div class="row">
 
-            <h1 class="section-title">Edit Account</h1>
+            <h1 class="section-title text-center">Edit Account</h1>
 
             <div class="col-md-6 col-md-offset-3">
 

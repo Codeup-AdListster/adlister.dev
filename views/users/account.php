@@ -17,30 +17,31 @@ if(Auth::check() !== true) {
 	<title>Account Details</title>
 </head>
 <body>
-	<div class="panel panel-default">
-	  <div class="panel-heading">Name</div>
-	  <div class="panel-body">
-        <?php echo $user->name ?>
-	  </div>
-	</div>
+	<h1 class="text-center">Account Info</h1>
+<div class="container">
 
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h3 class="panel-title">Username</h3>
-	  </div>
-	  <div class="panel-body">
-		<?php echo $user->username ?>
-	  </div>
-	</div>
+	
 
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h3 class="panel-title">Email</h3>
-	  </div>
-	  <div class="panel-body">
-        <?php echo $user->email ?>
-	  </div>
-	</div>
-	<button type="submit" class="btn btn-primary"><a href="/account/edit">Edit Account</a></button>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+
+	 <form method="POST" action="/account/edit" data-validation data-required-message="This field is required">
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" value="<?= $user->name; ?>" data-required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" value="<?= $user->email; ?>" data-required>
+                    </div>
+                    <div class="form-group">
+                        <?= $user->username; ?>
+                    </div>
+					<button type="submit" class="btn btn-primary">Edit Account</button>
+
+				</form>
+			</div>
+		</div>
+		
+</div>
 </body>
 </html>

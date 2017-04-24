@@ -7,7 +7,7 @@
 
             <div class="col-xs-12">
 
-                <h1 class="text-center">Welcome To Ooolister!</h1>
+                <h1 class="text-center">Welcome To localHookUps!</h1>
 
             </div>
 
@@ -24,10 +24,10 @@
             <!-- Placeholder for featured items.-->
             <div class="row">
                 <?php foreach($ads as $ad) : ?>                
-                <div class="col-xs-6 col-sm-4">
+                <div class=" wrapped col-xs-6 col-sm-4">
                     
                     <div>
-                        <p><a href="/ads/show?id=<?=$ad->id?>"><img src="<?= $ad->image ?>"></a></p>
+                        <p><a href="/ads/show?id=<?=$ad->id?>"><img class = "home_img" src="<?= $ad->image ?>"></a></p>
                         <p><a href="/ads/show?id=<?=$ad->id?>"><?= $ad->title?></a></p>
                     </div>
 

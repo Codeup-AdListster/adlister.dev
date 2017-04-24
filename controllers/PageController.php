@@ -173,7 +173,7 @@ function pageController()
             break;
 
         // user can edit posted ads. redirected if not logged in.
-        case '/ads/edit?id={n}':
+        case '/ads/edit':
             $mainView = '../views/ads/edit.php';
             if(!Auth::check()) {
                 header('Location: /login');
