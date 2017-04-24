@@ -12,7 +12,7 @@ require_once __DIR__ . "/../../controllers/PageController.php";
 
             <div class="col-xs-12">
 
-                <h1 class="text-center">All Ads</h1>
+                <h1 class="section-title text-center">Posted Ads</h1>
 
             </div>
 
